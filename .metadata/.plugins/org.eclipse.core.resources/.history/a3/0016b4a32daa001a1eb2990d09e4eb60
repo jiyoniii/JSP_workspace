@@ -1,0 +1,5 @@
+package com.saeyan.dao.copy;
+
+public class BoardDAO {
+
+}

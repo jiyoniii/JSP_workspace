@@ -1,0 +1,15 @@
+package com.saeyan.controller;
+
+public class ActionFactory {
+	private static ActionFactory instance = new ActionFactory();
+	
+	private ActionFactory() {
+		super();
+	}
+	
+	public static ActionFactory getInstance() {
+		return instance;
+	}
+	
+	
+}

@@ -1,0 +1,197 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" ></script>
+ <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<title>Insert title here</title>
+ <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        /* 입력창 */
+        .input-container {
+            display: flex;
+            width: 100%;
+            margin-bottom: 0px;
+            border-color: #CCCCCC;
+        }
+        
+        img{
+        	display: block;
+        	margin : 0px auto;
+        	margin-bottom : 20px;
+        	
+        } 
+
+        .icon {
+            padding: 10px;
+            height: 38px;
+            background: FAFAFA;
+            color: #CCCCCC;
+            min-width: 50px;
+            text-align: center;
+
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .input-field:focus {
+            border: 2px solid dodgerblue;
+        }
+
+        .button {
+            background: #0074E9;
+            color: white;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            height: 35px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            opacity: 1;
+        }
+
+        .bottom {
+            font-size: 13px;
+            color: grey;
+        }
+        
+    </style>
+
+<script type="text/javascript">
+$(function() {
+	var style = {
+			'color' : 'red',
+			'margin-left' : '50px',
+			'font-size' : '10px'
+	};
+	
+    $("#email").on("focusout", function() {
+       if (document.form.email.value == "") {
+          $("#emailalert").text("이메일을 입력하세요").css(style);
+       }else{
+    	   $("#emailalert").text("");
+       }
+    });
+    
+    
+    $("#pw").on("focusout", function() {
+       if (document.form.pw.value == "") {
+          $("#pwalert").text("비밀번호를 입력하세요").css(style);
+       }else{
+    	   $("#pwalert").text("");
+       }
+    });
+    
+    
+    $("#pwcheck").on("focusout", function() {
+        if (document.form.pw.value != document.form.pwcheck.value ) {
+           $("#pwcheckalert").text("비밀번호가 일치하지 않습니다.").css(style);
+        }else{
+     	   $("#pwcheckalert").text("");
+        }
+     });
+    
+    $("#name").on("focusout", function() {
+	    if (document.form.name.value == "") {
+	       $("#namealert").text("이름을 입력해주세요").css(style);
+	    }else{
+	    	$("#namealert").text("");
+	    }
+	    
+ 	});
+    
+    $("#phone").on("focusout", function() {
+    	var regExp = /^\d{3}-\d{3,4}-\d{4}$/;
+    	
+	    if (document.form.phone.value == "") {
+	       $("#phonealert").text("휴대폰 번호를 입력해주세요").css(style);
+	    }else if(document.form.phone.value != regExp){
+	    	
+	    	
+	    }
+	    else{
+	    	$("#phonealert").text("");
+	    }
+ 	});
+    
+    //휴대폰번호 정규식 check
+     $("#phone").on("focusout", function() {
+    	var regExp = /^\d{3}-\d{3,4}-\d{4}$/;
+		
+    	if(document.form.phone.value != regExp){
+			$("#phonealert").text("휴대폰번호를 바르게 입력해주세요");
+			}
+		})
+    		
+	 });
+
+
+</script>
+
+</head>
+<body>
+
+<!-- focus out사용하기 -->
+  <form name="form" method="get" action="JoinPage" style="max-width:500px;margin:auto;margin-top: 200px;">
+      <img src="img/logo.png">
+      <div class="input-container">
+            <i class="far fa-envelope icon"></i>
+            <input id="email" class="input-field" type="text" placeholder="아이디(이메일)" name="email"><br>
+        </div>
+         <p id="emailalert"></p>
+
+        <div class="input-container">
+            <i class="fas fa-lock icon"></i>
+            <input id="pw" class="input-field" type="text" placeholder="비밀번호" name="pw"></input>
+        </div>
+         <p id="pwalert"></p>
+        
+        <div class="input-container ">
+            <i class="fas fa-lock icon"></i>
+            <input id="pwcheck" class="input-field" type="text" placeholder="비밀번호 확인" name="pwcheck"></input>
+        </div>
+         <p id="pwcheckalert"></p>
+       
+       
+        <div class="input-container">
+            <i class="far fa-user icon"></i>
+            <input id="name" class="input-field" type="text" placeholder="이름" name="name"></input>
+        </div>
+       <p id="namealert"></p>
+       
+ 
+      
+        <div class="input-container">
+            <i class="fas fa-mobile-alt icon"></i>
+            <input id="phone" class="input-field" type="text" placeholder="휴대폰 번호" name="phone"></input>
+        </div>
+         <p id="phonealert"></p>
+       
+       
+        <!-- <button type="submit" value="동의하고 가입하기">동의하고 가입하기</button> -->
+        <input class="button" type="button" value="동의하고 가입하기"> 
+
+
+        <div class="bottom">본인은 <strong>만 14세 이상</strong>이며, <a href="#">쿠팡 이용약관</a>, <a href="#">전자금융거래이용약관</a>, <a
+                href="#">개인정보 수집 및 이용</a>,
+            개인정보 제공 내용을 확인 하였으며,<strong>동의합니다.</strong></div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+//productWrite.jsp에 등록된 js
+//function productCheck(){
+//	if(document.frm.name.value.length == 0){
+//		alert("상품명을 써주세요");
+//		frm.name.focus();
+//		return false;
+//	}
+//
+//	if(document.frm.price.value.length==0){
+//		alert("가격을 써주세요");
+//		frm.price.focus();
+//		return false;
+//	}
+//
+//	if(isNan(document.frm.price.value)){
+//		alert("숫자를 입력해야 합니다.");
+//		frm.price.select();
+//		return false;
+//	}
+//	return true;
+//}
+
+
+function deleteCheck(){
+	var delconfirm = confirm('삭제하시겠습니까?');
+	if(delconfirm){
+		alert('삭제되었습니다.');
+		document.form.submit();
+	}else{
+		alert('삭제가 취소되었습니다.');
+		return false;
+	}
+}
+
+//function word(){
+//	
+//	var badWord=["책상","연필","핸드폰","파우치","마우스","모니터","지우개"];
+//	var name = $(".name").val();
+//	
+//	// indexof 사용하여 금칙어 처리
+//	// indexOf를 쓰면 해당 글자가 몇 번째에 있는지 결과로 알려주는데 없기 때문에 음수인 -1로 표
+//	for (var i=0; i<badWord.length;i++){
+//		if(name.indexOf(badWord(i)) != -1 ){
+//			alert("해당 단어는 입력하실 수 없습니다.");
+//		}
+//	}
+//
+//};
+
+function word(){
+	var badWord=["책상","연필","핸드폰","파우치","마우스","모니터","지우개"];
+	var name = document.frm.name.value;
+	var description = document.frm.description.value;
+
+//	indexof 사용하여 금칙어 처리
+//	indexOf를 쓰면 해당 글자가 몇 번째에 있는지 결과로 알려주는데 없기 때문에 음수인 -1로 표
+	for (var i=0; i<badWord.length;i++){
+		if(name.indexOf(badWord[i]) != -1 ){
+			alert("해당 단어는 입력하실 수 없습니다.");
+			return false;
+		}
+	}
+};

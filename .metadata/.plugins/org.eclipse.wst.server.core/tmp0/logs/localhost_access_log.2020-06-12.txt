@@ -1,0 +1,9 @@
+127.0.0.1 - - [12/Jun/2020:14:00:36 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [12/Jun/2020:14:00:37 +0900] "GET /JSONServer/test.jsp HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [12/Jun/2020:14:00:37 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [12/Jun/2020:14:01:15 +0900] "GET /JSONServer/test.jsp?name=%ED%99%8D%EA%B8%B8%EB%8F%99&address=%EC%84%9C%EC%9A%B8 HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [12/Jun/2020:14:42:58 +0900] "GET /JSONServer/login.jsp HTTP/1.1" 200 46
+127.0.0.1 - - [12/Jun/2020:14:44:25 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [12/Jun/2020:14:44:26 +0900] "GET /JSONServer/login.jsp HTTP/1.1" 200 46
+127.0.0.1 - - [12/Jun/2020:15:19:05 +0900] "POST /JSONServer/login.jsp HTTP/1.1" 200 46
+127.0.0.1 - - [12/Jun/2020:15:19:14 +0900] "POST /JSONServer/login.jsp HTTP/1.1" 200 46

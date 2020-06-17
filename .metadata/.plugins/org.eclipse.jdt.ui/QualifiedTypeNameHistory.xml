@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
+<fullyQualifiedTypeName name="com.saeyan.dao.ProductDAO"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardWriteAction"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardWriteFormAction"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardViewAction"/>
+<fullyQualifiedTypeName name="com.jy.itemdao.ItemDAO"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardCheckPassFormAction"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardUpdateAction"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardUpdateFormAction"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardListAction"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.BoardDeleteAction"/>
+<fullyQualifiedTypeName name="com.saeyan.dto.ReplyVO"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.saeyan.dao.MemberDAO"/>
+<fullyQualifiedTypeName name="com.saeyan.dto.MemberVO"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="util.DBManager"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.saeyan.controller.action.Action"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.saeyan.dao.BoardDAO"/>
+<fullyQualifiedTypeName name="com.saeyan.dto.BoardVO"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+</qualifiedTypeNameHistroy>

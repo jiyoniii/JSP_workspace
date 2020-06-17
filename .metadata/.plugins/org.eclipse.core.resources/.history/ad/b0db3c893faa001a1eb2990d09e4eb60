@@ -1,0 +1,14 @@
+package com.saeyan.controller.action;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+//요청파라미터를 동일한 메소드로 처리하기 위해 추상메소드를 정의함.
+//이 Action을 각자 상속받아 구현해야 함.
+public interface Action {
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+}
